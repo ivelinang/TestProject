@@ -4,7 +4,7 @@
 #include "NormalDistribution2D.h"
 #include "Constants.h"
 
-NormalDistribution2D::NormalDistribution2D(const double rho) : alpha1(1.0), alpha(1.0),
+NormalDistribution2D::NormalDistribution2D(const double rho) : alpha1(1.0), alpha2(1.0),
 beta1(0.0), beta2(0.0), rho(rho)
 {
 	if (rho*rho >= 1)
