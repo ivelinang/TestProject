@@ -41,3 +41,21 @@ BOOST_AUTO_TEST_CASE(InverseCDFTest)
 	BOOST_CHECK_CLOSE(inv_res, boost_inv_res, 0.0001);
 }
 
+BOOST_AUTO_TEST_CASE(pointerTest)
+{
+	int num = 5;
+	int *ptr;
+	ptr = &num;
+
+	size_t mDims = 4;
+	size_t nDims = 6;
+	size_t *numDims;
+	numDims = &mDims;
+	*numDims = nDims;
+
+	BOOST_CHECK(*ptr == 5);
+	BOOST_CHECK(*numDims == 6);
+	BOOST_CHECK(mDims == 6);
+
+}
+
